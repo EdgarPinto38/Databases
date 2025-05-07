@@ -1,0 +1,86 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --background-color: #212A31;
+    --secondary-background-color: #2e3944;
+    --text-color: #F8FAFC;
+    --secondary-text-color: #748d92;
+    --buttons-color: #d3d9d4;
+    --success-color: #22C55E;
+    --warning-color: #EAB308;
+    --error-color: #EF4444;
+    --hover-color: #124e66;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 18rem 2fr;
+    min-height: 100vb;
+}
+
+.navbar{
+    position: sticky;
+    top: 0%;
+    max-width: 18rem;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vb;
+}
+
+.content{
+    background-color: var(--secondary-background-color);
+    grid-column: 2;
+}
+
+.logo-wrapper{
+    display: flex;
+    height: 6rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/webp/mainLogo.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.list-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.list-item{
+    display: inherit;
+    align-items: center;
+    height: 5rem;
+    padding-inline-start: 2rem;
+    text-decoration: none; 
+    transition: background-color 200ms linear;
+}
+
+.list-item:hover{
+    background-color: var(--hover-color);
+}
+
+.list-logo{
+    width: 50px;
+    height: 50px;
+}
+
+.list-text{
+    color: var(--text-color);
+    padding-inline-start: 1.2rem;
+    font-weight: bold;
+}
+
+.user-card{
+    width: 100%;
+}
+
