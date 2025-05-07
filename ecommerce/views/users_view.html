@@ -12,14 +12,39 @@
     <div class="grid-container">
         <nav class="navbar">
             <div class="logo-wrapper"></div>
-            <div class="list-wrapper">
-                <a href="" class="list-item active" aria-current="page" ><img src="../images/icons/users.svg" alt="users logo" class="list-logo"><p class="list-text">Users</p></a>
+            <ul class="list-wrapper">
+                <li><a href="users_view.php" class="list-item" aria-current="page">
+                    <img src="../images/icons/users.svg" alt="Users icon" class="list-logo">
+                    <span class="list-text">Users</span>
+                </a></li>
             </ul>
         </nav>
-        <main class="content">
-            <div class="user-card">
 
-            </div>
+        <main class="content">
+            <h2 class="content-header">Users List:</h2>
+            <section class="users-wrapper">
+                <article class="user-card">
+                    <div class="user-image"></div>
+                    <div class="user-info">
+                        <div class="row">
+                            <div class="user-username">Username: <span class="user-value">username</span></div>
+                            <div class="user-password">Password: <span class="user-value">password</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="user-mail">Email: <span class="user-value">email</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="user-name">Name: <span class="user-value">name</span></div>
+                            <div class="user-last">Last Name: <span class="user-value">lastname</span></div>
+                            <div class="user-birthday">Birthday: <span class="user-value">birthday</span></div>
+                        </div>
+                    </div>
+                    <form action="" method="post" class="user-button-wrapper">
+                        <input type="submit" value="Delete" class="user-button" />
+                        <input type="submit" value="Modify" class="user-button" />
+                    </form>
+                </article>
+            </section>
         </main>
     </div>
 </body>
