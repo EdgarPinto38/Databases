@@ -20,14 +20,13 @@ if (!empty($_GET['q'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Laragon</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Sign Up</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <h1 class="title" title="Laragon">Login</h1>
+    <div>
+        <div>
             <?php
             if(!empty($_POST['username']))
             {
@@ -56,7 +55,7 @@ if (!empty($_GET['q'])) {
 
                 if ($result === true) {
                         ?>
-                        <div class="info">
+                        <div style="width: 100%; height: 100% ; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white;">
                             <p>Username: <span><?php echo $u_user; ?></span> creado con exito... </p><br>
                         </div><br>
                         <?php
@@ -70,33 +69,40 @@ if (!empty($_GET['q'])) {
             
             else{
                 ?>
-                <form action="" method="POST">
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" >
+                <div class="full-screen-container">
+                    <div class="login-container">
+                        <h1 class="login-title">Sign Up</h1>
+                        <form class="form" action="" method="post">
+                            <div class="input-group">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <input type="text" name="password" id="password">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="input-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="input-group">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="lastname" id="lastname">
+                            </div>
+                            <div class="input-group">
+                                <label for="birthday">Birthday</label>
+                                <input type="date" name="birthday" id="birthday">
+                            </div>
+
+                            <button type="submit" class="login-button">Sign Up</button>
+                        </form>
                     </div>
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" >
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" >
-                    </div>
-                    <div class="input-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" >
-                    </div>
-                    <div class="input-group">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" name="lastname" id="lastname" >
-                    </div>
-                    <div class="input-group">
-                        <label for="birthday">Birthday</label>
-                        <input type="date" name="birthday" id="birthday" >
-                    </div>
-                    <button type="submit" class="button">Sign Up</button>
-                </form>
+                </div>
                 <?php
             }
             ?>
