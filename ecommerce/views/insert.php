@@ -12,6 +12,10 @@ if (!empty($_GET['q'])) {
             exit;
     }
 }
+session_start();
+if (empty($_SESSION["id"])) {
+    die("No inicio sesion");
+}
 ?>
 
 <!DOCTYPE html>

@@ -12,6 +12,7 @@ if (!empty($_GET['q'])) {
             exit;
     }
 }
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +51,7 @@ if (!empty($_GET['q'])) {
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
+                    $_SESSION['id'] = $row["id"];
                     $row = $result->fetch_assoc()
                         ?>
                         <div class="info">
@@ -59,6 +61,7 @@ if (!empty($_GET['q'])) {
                                 <li class="list-item">Email: <span><?php echo $row["email"] ?></span> </li>
                                 <li class="list-item">Birthday: <span><?php echo $row["birthday"] ?></span> </li>
                                 <li class="list-item">Name: <span><?php echo $row["name"] ?></span> </li>
+                                <li class="list-item">Last Name: <span><?php echo $row["lastname"] ?></span> </li>
                                 <li class="list-item">Last Name: <span><?php echo $row["lastname"] ?></span> </li>
                             </ul>
                         </div>
